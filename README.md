@@ -1,0 +1,2 @@
+# mvp_better
+MVP模式的抽取封装，使用工厂用于创建不同类型的persenter,使用代理模式管理persenter生命周期
