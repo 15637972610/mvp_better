@@ -84,6 +84,9 @@ public class AbstractFragment<V extends BaseMvpView, P extends BaseMvpPresenter<
      */
     @Override
     public P getMvpPresenter() {
+        if (!mProxy.checkIsAttachView()){
+            mProxy.onResume((V) this);
+        }
         return mProxy.getMvpPresenter();
     }
 }

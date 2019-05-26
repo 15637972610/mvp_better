@@ -74,6 +74,9 @@ public abstract class AbstractMvpActivitiy<V extends BaseMvpView, P extends Base
     @Override
     public P getMvpPresenter() {
         Log.e(TAG,"V getMvpPresenter");
+        if (!mProxy.checkIsAttachView()){
+            mProxy.onResume((V) this);
+        }
         return mProxy.getMvpPresenter();
     }
 }

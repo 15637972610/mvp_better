@@ -137,4 +137,12 @@ public class BaseMvpProxy<V extends BaseMvpView, P extends BaseMvpPresenter<V>> 
         mBundle = savedInstanceState;
 
     }
+
+    /**
+     * 判断View是否Attach
+     * @return
+     */
+    public boolean checkIsAttachView() {
+        return mIsAttchView;
+    }
 }
